@@ -118,8 +118,6 @@ type ObjectStoreConfig struct { // e.g. Minio, s3
 	BucketName string `json:"bucketName"`
 	// Region is the region where bucket is hosted
 	Region string `json:"region"`
-	// SSL enable ssl for object store transport
-	SSL bool `json:"ssl"`
 }
 
 type ObjectStoreCredentials struct {
@@ -377,7 +375,7 @@ func (n *NemoDatastore) GetInitContainerEnv() []corev1.EnvVar {
 		},
 		{
 			Name:  "GITEA__LFS__MINIO_USE_SSL",
-			Value: strconv.FormatBool(objStoreSetting.SSL),
+			Value: "false",
 		},
 		{
 			Name:  "GITEA__DATABASE__SSL_MODE",

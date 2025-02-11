@@ -874,15 +874,11 @@ spec:
                   serveDirect:
                     default: true
                     type: boolean
-                  ssl:
-                    description: SSL enable ssl for object store transport
-                    type: boolean
                 required:
                 - bucketName
                 - credentials
                 - endpoint
                 - region
-                - ssl
                 type: object
               podAffinity:
                 description: Pod affinity is a group of inter pod affinity scheduling

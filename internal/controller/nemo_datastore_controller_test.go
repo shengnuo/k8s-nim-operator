@@ -75,7 +75,6 @@ var _ = Describe("NemoDatastore Controller", func() {
 					Endpoint:   "test-mino-host",
 					BucketName: "test-bucket",
 					Region:     "test-region",
-					SSL:        false,
 				},
 			},
 		}
